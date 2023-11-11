@@ -1,3 +1,5 @@
+using wibw_api.Db;
+
 namespace wibw_api
 {
     public class Program
@@ -12,6 +14,9 @@ namespace wibw_api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            // Db
+            builder.Services.AddDbContext<SupperContext>();
 
             var app = builder.Build();
 
